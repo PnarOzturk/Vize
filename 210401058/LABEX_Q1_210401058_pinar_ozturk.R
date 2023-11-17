@@ -21,4 +21,7 @@ if(dim(maps)[1]==10 && dim(maps)[2]==9){ #dim fonksiyonu boyutu verir // verilen
 maps <- maps %>% mutate(Latitude = gsub("[^0-9.]", "", Latitude))
 #1.4
 idx <- which(grepl("W", maps$Longitude))
+#1.5
+maps <- maps %>%
+  mutate(Longitude = gsub("[EW]", "", Longitude))
 
