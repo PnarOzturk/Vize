@@ -18,5 +18,11 @@ print(current_dir)
 relative_path <- file.path(current_dir, "LABEX_Q1_210401058_pinar_ozturk.R")
 
 source(relative_path)
+#2.4
 
+test_that("Dosya varl??k testi", {
+  # Dosyan??n var olup olmad??????n?? kontrol etme
+  file_exist <- file.exists("MapsThatChangedOurWorld_StoryMap_Data.csv")
+  expect_true(file_exist, info = "Dosyan??n bulundu??unu kontrol etme")
+})
 
