@@ -25,4 +25,9 @@ test_that("Dosya varl??k testi", {
   file_exist <- file.exists("MapsThatChangedOurWorld_StoryMap_Data.csv")
   expect_true(file_exist, info = "Dosyan??n bulundu??unu kontrol etme")
 })
+#2.5
+test_that("Test : maps adl?? de??i??ken Global Workspace???de mevcuttur.", {
+  expect_true(exists("maps", envir = .GlobalEnv), info = "maps adl?? de??i??ken mevcut de??il.")
+})
+
 

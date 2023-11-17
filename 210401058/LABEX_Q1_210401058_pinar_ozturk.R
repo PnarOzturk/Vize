@@ -17,4 +17,6 @@ if(dim(maps)[1]==10 && dim(maps)[2]==9){ #dim fonksiyonu boyutu verir // verilen
 }else{
   print("hatal??")
 }
+#1.3
+maps <- maps %>% mutate(Latitude = gsub("[^0-9.]", "", Latitude))
 
